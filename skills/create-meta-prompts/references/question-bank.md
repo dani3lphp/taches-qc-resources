@@ -226,6 +226,58 @@ multiSelect: true
 
 </research_questions>
 
+<refine_questions>
+
+<target_selection>
+When multiple outputs exist:
+```yaml
+header: "Target"
+question: "Which output should be refined?"
+options:
+  - "{file1}" - In .prompts/{folder1}/
+  - "{file2}" - In .prompts/{folder2}/
+  # List existing research/plan outputs
+```
+</target_selection>
+
+<feedback_type>
+What kind of improvement:
+```yaml
+header: "Improvement"
+question: "What needs improvement?"
+options:
+  - "Deepen analysis" - Add more detail, examples, or rigor
+  - "Expand scope" - Cover additional areas or topics
+  - "Correct errors" - Fix factual mistakes or outdated info
+  - "Restructure" - Reorganize for clarity or usability
+```
+</feedback_type>
+
+<specific_feedback>
+After type selected, gather details:
+```yaml
+header: "Details"
+question: "What specifically should be improved?"
+# Let user provide via "Other" option
+# This is the core feedback that drives the refine prompt
+```
+</specific_feedback>
+
+<preservation>
+What to keep:
+```yaml
+header: "Preserve"
+question: "What's working well that should be kept?"
+options:
+  - "Structure" - Keep the overall organization
+  - "Recommendations" - Keep the conclusions
+  - "Code examples" - Keep the implementation patterns
+  - "Everything except feedback areas" - Only change what's specified
+```
+</preservation>
+
+</refine_questions>
+
 <question_rules>
 - Only ask about genuine gaps - don't ask what's already stated
 - 2-4 questions max per round - avoid overwhelming

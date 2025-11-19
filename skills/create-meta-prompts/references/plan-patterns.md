@@ -67,11 +67,20 @@ Structure the plan using this XML format:
 ```
 </output_structure>
 
+<summary_requirements>
+Create `.prompts/{num}-{topic}-plan/SUMMARY.md`
+
+Load template: [summary-template.md](summary-template.md)
+
+For plans, emphasize phase breakdown with objectives and assumptions needing validation. Next step typically: Execute first phase.
+</summary_requirements>
+
 <success_criteria>
 - Plan addresses all requirements
 - Phases are sequential and logical
 - Tasks are specific and actionable
 - Metadata captures uncertainties
+- SUMMARY.md created with phase overview
 - Ready for implementation prompts to consume
 </success_criteria>
 ```
@@ -254,44 +263,5 @@ Structure as process:
 </plan_types>
 
 <metadata_guidelines>
-
-<confidence_levels>
-- `high`: Clear path forward, well-researched, few unknowns
-- `medium`: Reasonable approach but some uncertainties
-- `low`: Best guess, needs validation, multiple unknowns
-</confidence_levels>
-
-<dependencies_format>
-External requirements that must be met:
-```xml
-<dependencies>
-  - API keys for third-party service
-  - Database migration completed
-  - Team trained on new patterns
-</dependencies>
-```
-</dependencies_format>
-
-<open_questions_format>
-Uncertainties that may affect execution:
-```xml
-<open_questions>
-  - How will this scale beyond 10k users?
-  - Is the third-party API rate limit sufficient?
-  - Should we support offline mode?
-</open_questions>
-```
-</open_questions_format>
-
-<assumptions_format>
-What was assumed that might need validation:
-```xml
-<assumptions>
-  - Using existing user table structure
-  - Single-region deployment initially
-  - Team has React experience
-</assumptions>
-```
-</assumptions_format>
-
+Load: [metadata-guidelines.md](metadata-guidelines.md)
 </metadata_guidelines>

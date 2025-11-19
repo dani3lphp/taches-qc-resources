@@ -46,10 +46,19 @@ Before declaring complete:
 - {Edge cases to verify}
 </verification>
 
+<summary_requirements>
+Create `.prompts/{num}-{topic}-{purpose}/SUMMARY.md`
+
+Load template: [summary-template.md](summary-template.md)
+
+For Do prompts, include Files Created section with paths and descriptions. Emphasize what was implemented and test status. Next step typically: Run tests or execute next phase.
+</summary_requirements>
+
 <success_criteria>
 {Clear, measurable criteria}
 - {Criterion 1}
 - {Criterion 2}
+- SUMMARY.md created with files list and next step
 </success_criteria>
 ```
 </prompt_template>

@@ -80,11 +80,20 @@ Structure findings using this XML format:
 ```
 </output_structure>
 
+<summary_requirements>
+Create `.prompts/{num}-{topic}-research/SUMMARY.md`
+
+Load template: [summary-template.md](summary-template.md)
+
+For research, emphasize key recommendation and decision readiness. Next step typically: Create plan.
+</summary_requirements>
+
 <success_criteria>
 - All scope questions answered
 - Sources are current (2024-2025)
 - Findings are actionable
 - Metadata captures gaps
+- SUMMARY.md created with substantive one-liner
 - Ready for planning/implementation to consume
 </success_criteria>
 ```
@@ -285,46 +294,7 @@ For each option:
 </research_types>
 
 <metadata_guidelines>
-
-<confidence_levels>
-- `high`: Official docs, verified patterns, clear consensus
-- `medium`: Mixed sources, some outdated info, minor gaps
-- `low`: Sparse documentation, conflicting info, significant unknowns
-</confidence_levels>
-
-<dependencies_format>
-What's needed to use this research:
-```xml
-<dependencies>
-  - Node.js 18+ for recommended library
-  - API key from service dashboard
-  - Test account for sandbox
-</dependencies>
-```
-</dependencies_format>
-
-<open_questions_format>
-What couldn't be determined:
-```xml
-<open_questions>
-  - Actual rate limits under production load
-  - Performance with >100k records
-  - Specific error codes for edge cases
-</open_questions>
-```
-</open_questions_format>
-
-<assumptions_format>
-Context assumed during research:
-```xml
-<assumptions>
-  - Using REST API (not GraphQL)
-  - Single region deployment
-  - Node.js/TypeScript stack
-</assumptions>
-```
-</assumptions_format>
-
+Load: [metadata-guidelines.md](metadata-guidelines.md)
 </metadata_guidelines>
 
 <tool_usage>
