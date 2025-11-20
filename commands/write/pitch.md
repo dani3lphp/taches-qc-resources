@@ -1,12 +1,12 @@
 ---
-description: Write a quick pitch - explain your thing in 30 seconds
+description: Write a quick pitch - explain your thing compellingly
 argument-hint: [project/idea or leave blank for current context]
 ---
 
 <objective>
 Write a pitch for $ARGUMENTS (or the current topic if no arguments provided).
 
-Explain your thing clearly and compellingly in 30 seconds or less. Make them want to know more.
+Explain your thing clearly and compellingly. Make them want to know more.
 </objective>
 
 <intake_gate>
@@ -99,7 +99,6 @@ After intake complete:
 </output_format>
 
 <constraints>
-- Under 30 seconds spoken
 - No jargon
 - Specific problem, not vague category
 - "Why you" must be defensible

@@ -86,8 +86,6 @@ After intake complete:
 
 <constraints>
 - Subject line must be specific (not "Quick question")
-- One ask per email (if multiple, bullet them)
-- Shorter is always better
 - No filler ("I hope this email finds you well")
 - Make it easy to say yes
 </constraints>

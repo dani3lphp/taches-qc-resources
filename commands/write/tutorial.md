@@ -131,8 +131,6 @@ After intake complete:
 - Every step must be testable (they know if it worked)
 - Code must be copy-pasteable (no invisible characters, correct paths)
 - No assumed knowledge beyond stated prerequisites
-- Explain the "why" briefly but don't over-explain
-- Test it yourself or be very confident it works
 </constraints>
 
 <artifact_output>

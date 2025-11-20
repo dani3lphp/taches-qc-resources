@@ -99,8 +99,6 @@ After intake complete:
 </output_format>
 
 <constraints>
-- Lead with what the reader needs most (usually Quick Start)
-- Every concept gets an example
 - Code must be copy-pasteable (no placeholders without explanation)
 - Organize by user goals, not internal architecture
 - Link to details, don't front-load them

@@ -30,9 +30,6 @@ Use AskUserQuestion to ask 2-4 questions based on actual gaps:
 **If depth unclear:**
 - "How deep should I go?" with options: Overview (key points only), Solid understanding (main concepts), Comprehensive (thorough coverage), Other
 
-**If focus unclear:**
-- "Any specific angles?" with options: Practical application, Theoretical understanding, Comparison to alternatives, Historical context, Other
-
 **If application unclear:**
 - "How will this be used?" with options: Inform implementation, Make architecture decision, Evaluate feasibility, General knowledge, Other
 

@@ -79,9 +79,6 @@ If "Start summarizing" → proceed to summary
 </output_format>
 
 <constraints>
-- Maximum 3 levels of nesting
-- One idea per bullet
-- No full sentences if fragment works
 - Bold the main points for scannability
 </constraints>
 

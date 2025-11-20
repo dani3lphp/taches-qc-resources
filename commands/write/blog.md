@@ -94,11 +94,9 @@ After intake complete:
 </output_format>
 
 <constraints>
-- One core idea per post (not a listicle of unrelated things)
 - Specific examples > abstract claims
 - Personal voice (not corporate speak)
 - Title is specific and honest (no clickbait)
-- Every paragraph earns its place
 </constraints>
 
 <artifact_output>
