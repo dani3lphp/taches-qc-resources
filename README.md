@@ -1,6 +1,38 @@
 # TÂCHES Claude Code Resources
 
-A growing collection of my favourite custom Claude Code resources in one place.
+A growing collection of custom Claude Code resources built for real workflows.
+
+## Philosophy
+
+When you use a tool like Claude Code, it's your responsibility to assume everything is possible.
+
+I built these tools using that mindset.
+
+Dream big. Happy building.
+
+— TÂCHES
+
+## What's Inside
+
+**[Commands](#commands)** (39 total) - Slash commands that expand into structured workflows
+- **Meta-Prompting**: Separate planning from execution with staged prompts
+- **Todo Management**: Capture context mid-work, resume later with full state
+- **Research**: Technical feasibility, competitive analysis, open-source discovery
+- **Planning**: Project briefs, MVPs, full plans with phases and dependencies
+- **Thinking Models**: Mental frameworks (first principles, inversion, 80/20, etc.)
+- **Extraction**: Pull platform-agnostic specs and UI patterns from codebases
+
+**[Skills](#skills)** (5 total) - Autonomous workflows that research, generate, and self-heal
+- **Create Agent Skills**: Build new skills by describing what you want
+- **Create Meta-Prompts**: Generate staged workflow prompts with dependency detection
+- **Create Slash Commands**: Build custom commands with proper structure
+- **Create Subagents**: Build specialized Claude instances for isolated contexts
+- **Create Hooks**: Build event-driven automation
+
+**[Agents](#agents)** (3 total) - Specialized subagents for validation and quality
+- **skill-auditor**: Reviews skills for best practices compliance
+- **slash-command-auditor**: Reviews commands for proper structure
+- **subagent-auditor**: Reviews agent configurations for effectiveness
 
 ## Installation
 
@@ -93,19 +125,6 @@ Apply mental frameworks to decisions and problems.
 - [`/consider:opportunity-cost`](./commands/consider/opportunity-cost.md) - Analyze what you give up
 - [`/consider:via-negativa`](./commands/consider/via-negativa.md) - Improve by removing
 
-### Writing
-
-Generate content by type.
-
-- [`/write:email`](./commands/write/email.md) - Any tone, any purpose
-- [`/write:blog`](./commands/write/blog.md) - Share ideas, teach, tell stories
-- [`/write:docs`](./commands/write/docs.md) - READMEs, guides, API docs
-- [`/write:spec`](./commands/write/spec.md) - Technical specifications
-- [`/write:tutorial`](./commands/write/tutorial.md) - Step-by-step teaching
-- [`/write:pitch`](./commands/write/pitch.md) - Explain your thing in 30 seconds
-- [`/write:thread`](./commands/write/thread.md) - X/Twitter threads
-- [`/write:reflection`](./commands/write/reflection.md) - Process experiences, extract lessons
-
 ### Planning
 
 Structure work at any scale.
@@ -127,43 +146,12 @@ Investigate and analyze.
 - [`/research:history`](./commands/research/history.md) - What's been tried before
 - [`/research:deep-dive`](./commands/research/deep-dive.md) - Comprehensive investigation
 
-### Explanation
-
-Teach and communicate concepts.
-
-- [`/explain:eli5`](./commands/explain/eli5.md) - Simple language, no jargon
-- [`/explain:analogy`](./commands/explain/analogy.md) - Bridge unfamiliar to familiar
-- [`/explain:socratic`](./commands/explain/socratic.md) - Questions that lead to understanding
-- [`/explain:visual`](./commands/explain/visual.md) - Diagrams, ASCII art, charts
-- [`/explain:layers`](./commands/explain/layers.md) - Progressive disclosure, surface to deep
-- [`/explain:story`](./commands/explain/story.md) - Narrative with characters and conflict
-- [`/explain:debate`](./commands/explain/debate.md) - Steelman both sides
-- [`/explain:misconceptions`](./commands/explain/misconceptions.md) - Clear up what people get wrong
-- [`/explain:implications`](./commands/explain/implications.md) - Draw out consequences
-- [`/explain:reverse`](./commands/explain/reverse.md) - Start with conclusion, work backwards
-- [`/explain:adversarial`](./commands/explain/adversarial.md) - Attack to find weaknesses
-- [`/explain:first-contact`](./commands/explain/first-contact.md) - Zero cultural context
-
 ### Extraction
 
 Pull patterns from content.
 
 - [`/extract:spec`](./commands/extract/spec.md) - Extract platform-agnostic specification from codebase
 - [`/extract:ui`](./commands/extract/ui.md) - Extract UI/UX design patterns from codebase
-
-### Summarization
-
-Condense information.
-
-- [`/summarize:tldr`](./commands/summarize/tldr.md) - 2-3 sentences max
-- [`/summarize:key-points`](./commands/summarize/key-points.md) - 5-7 most important points
-- [`/summarize:bullet`](./commands/summarize/bullet.md) - Hierarchical bullet points
-- [`/summarize:quotes`](./commands/summarize/quotes.md) - Extract best quotes verbatim
-- [`/summarize:timeline`](./commands/summarize/timeline.md) - Chronological events
-- [`/summarize:technical`](./commands/summarize/technical.md) - Preserve implementation details
-- [`/summarize:video`](./commands/summarize/video.md) - YouTube transcript to insights
-- [`/summarize:teach-me`](./commands/summarize/teach-me.md) - Summarize as if teaching
-- [`/summarize:for-later`](./commands/summarize/for-later.md) - Enough context to reconstruct understanding
 
 ## Agents
 
