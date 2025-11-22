@@ -107,15 +107,13 @@ If yes: `git init`
 </context_scan>
 
 <domain_expertise>
-**Domain expertise can be loaded from `~/.claude/skills/build/` or local `build/` directory**
+**Domain expertise lives in `~/.claude/skills/build/`**
 
 Before creating roadmap or phase plans, determine if domain expertise should be loaded.
 
 <scan_domains>
 ```bash
-# Check for domain skills in both locations
 ls ~/.claude/skills/build/ 2>/dev/null
-ls ./build/ 2>/dev/null
 ```
 
 This reveals available domain expertise (e.g., macos-apps, iphone-apps, unity-games, next-js-apps).
@@ -166,20 +164,13 @@ Select:
 When domain selected, READ all references from that skill:
 
 ```bash
-# Try global location first, then local
-if [ -d ~/.claude/skills/build/[domain] ]; then
-  cat ~/.claude/skills/build/[domain]/references/*.md
-elif [ -d ./build/[domain] ]; then
-  cat ./build/[domain]/references/*.md
-else
-  echo "Domain skill not found in either location"
-fi
+cat ~/.claude/skills/build/[domain]/references/*.md 2>/dev/null
 ```
 
 This loads domain patterns, conventions, commands into context BEFORE planning.
-Announce: "Loaded [domain] expertise from [location]. Planning with [framework] context."
+Announce: "Loaded [domain] expertise. Planning with [framework] context."
 
-**If domain skill not found:** Inform user and offer to proceed without domain expertise or create a basic domain template.
+**If domain skill not found:** Inform user and offer to proceed without domain expertise.
 </load_domain>
 
 <when_to_load>

@@ -95,18 +95,47 @@ All planning artifacts go in `.planning/`:
 
 ## Domain Skills (Optional)
 
-Domain expertise provides framework-specific patterns, conventions, and commands.
+**What are domain skills?**
 
-The skill checks two locations:
-- `~/.claude/skills/build/[domain]` (global)
-- `./build/[domain]` (local to repo)
+Framework/platform-specific knowledge that makes your plans concrete instead of generic.
 
-Example domains:
-- `macos-apps` - Swift/SwiftUI macOS development
-- `iphone-apps` - Swift/SwiftUI iOS development
-- `example-nextjs` - Next.js web apps (included as example)
+**Without domain skill:**
+```
+Task: Create authentication system
+Action: Implement user login
+```
+Generic. Not helpful.
 
-When planning with domain expertise, the skill loads reference files before creating PLAN.md, ensuring tasks are framework-appropriate.
+**With domain skill (Next.js):**
+```
+Task: Create login API endpoint
+Files: src/app/api/auth/login/route.ts
+Action: POST endpoint using App Router conventions. Accept {email, password},
+validate with Prisma, return JWT in httpOnly cookie. Use jose library
+(not jsonwebtoken - ESM issues with Next.js 14).
+Verify: curl -X POST /api/auth/login returns 200 + Set-Cookie
+```
+Specific. Executable. Framework-appropriate.
+
+**Where they live:**
+
+`~/.claude/skills/build/[domain]/references/*.md`
+
+**Example domains:**
+- `macos-apps` - Swift/SwiftUI macOS patterns, AppKit when needed, Xcode project structure
+- `iphone-apps` - Swift/SwiftUI iOS patterns, UIKit integration, device considerations
+- `example-nextjs` - Next.js App Router patterns, API routes, server components (included as example)
+
+**How it works:**
+
+1. Skill infers domain from your request ("build a macOS app" → macos-apps)
+2. Before creating PLAN.md, reads `~/.claude/skills/build/macos-apps/references/*.md`
+3. Uses that knowledge to write framework-specific tasks
+4. Result: Plans that match your actual tech stack
+
+**What if you don't have domain skills?**
+
+Skill works fine without them - proceeds with general planning. But tasks will be more generic and require more clarification during execution.
 
 ### Creating a Domain Skill
 
