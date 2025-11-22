@@ -120,7 +120,7 @@ Specific. Executable. Framework-appropriate.
 **Structure of domain skills:**
 
 ```
-~/.claude/skills/build/[domain]/
+~/.claude/skills/expertise/[domain]/
 ├── SKILL.md              # Router + essential principles
 ├── workflows/            # build-new-app, add-feature, debug-app, etc.
 └── references/           # Exhaustive domain knowledge (often 10k+ lines)
@@ -131,7 +131,7 @@ Specific. Executable. Framework-appropriate.
 1. **Standalone skills** - Invoke with `Skill("build-macos-apps")` for guided development
 2. **Context for create-plans** - Loaded automatically when planning that domain
 
-**Example domains included in this repo (../build/):**
+**Example domains included in this repo (../expertise/):**
 - `macos-apps` - Swift/SwiftUI macOS (19 references, 10k+ lines)
 - `iphone-apps` - Swift/SwiftUI iOS (19 references, 9.5k+ lines)
 
@@ -143,8 +143,8 @@ Specific. Executable. Framework-appropriate.
 
 **How it works:**
 
-1. Skill infers domain from your request ("build a macOS app" → build-macos-apps)
-2. Before creating PLAN.md, reads all `~/.claude/skills/build/macos-apps/references/*.md`
+1. Skill infers domain from your request ("build a macOS app" → expertise/macos-apps)
+2. Before creating PLAN.md, reads all `~/.claude/skills/expertise/macos-apps/references/*.md`
 3. Uses that exhaustive knowledge to write framework-specific tasks
 4. Result: Plans that match your actual tech stack with all the details
 
@@ -271,14 +271,14 @@ If it sounds like corporate PM theater, it doesn't belong.
 
 ## Example Domain Skills
 
-See `../build/` for example domain expertise skills included in this repo:
+See `../expertise/` for example domain expertise skills included in this repo:
 
-**[macos-apps](../build/macos-apps/)** - Comprehensive Swift/SwiftUI macOS development
+**[macos-apps](../expertise/macos-apps/)** - Comprehensive Swift/SwiftUI macOS development
 - 19 reference files covering architecture, UI patterns, data persistence, networking, testing, debugging, performance, distribution
 - Full SKILL.md with router pattern and workflows
 - 10k+ lines of exhaustive domain knowledge
 
-**[iphone-apps](../build/iphone-apps/)** - Comprehensive Swift/SwiftUI iOS development
+**[iphone-apps](../expertise/iphone-apps/)** - Comprehensive Swift/SwiftUI iOS development
 - 19 reference files covering iOS-specific patterns, lifecycle, UI/UX, platform features
 - Complete mobile development expertise
 - 9.5k+ lines of domain knowledge

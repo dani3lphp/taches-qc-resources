@@ -75,9 +75,9 @@ else
     echo "NOT_IN_SKILL"
 fi
 
-# Show available build skills
-echo "BUILD_SKILLS:"
-ls ~/.claude/skills/build/ 2>/dev/null | head -5
+# Show available expertise skills
+echo "EXPERTISE_SKILLS:"
+ls ~/.claude/skills/expertise/ 2>/dev/null | head -5
 ```
 
 **Present findings before intake question.**

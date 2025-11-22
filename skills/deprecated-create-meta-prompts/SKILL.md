@@ -13,7 +13,7 @@ description: DEPRECATED - Use create-plans for project building. Create optimize
 **Why deprecated:**
 - create-plans evolved from this approach with better lifecycle management
 - Hierarchical structure (BRIEF.md → ROADMAP.md → phases/*/PLAN.md)
-- Domain-aware planning loads framework-specific expertise from ~/.claude/skills/build/
+- Domain-aware planning loads framework-specific expertise from ~/.claude/skills/expertise/
 - Context management with automatic handoffs at token limits
 - Git versioning commits outcomes, not process
 

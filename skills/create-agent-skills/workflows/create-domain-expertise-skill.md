@@ -48,13 +48,13 @@ Get specific: "Python games" or "Python games with Pygame specifically"?
 
 Explain:
 ```
-Domain expertise skills go in: ~/.claude/skills/build/{domain-name}/
+Domain expertise skills go in: ~/.claude/skills/expertise/{domain-name}/
 
 These are loaded BY other skills (like create-plans) to provide
 domain-specific knowledge during planning and execution.
 
 Name suggestion: {suggested-name}
-Location: ~/.claude/skills/build/{suggested-name}/
+Location: ~/.claude/skills/expertise/{suggested-name}/
 ```
 
 Confirm or adjust name.
@@ -358,14 +358,14 @@ Run spot checks:
 
 ```bash
 # Create structure
-mkdir -p ~/.claude/skills/build/{domain-name}
-mkdir -p ~/.claude/skills/build/{domain-name}/references
+mkdir -p ~/.claude/skills/expertise/{domain-name}
+mkdir -p ~/.claude/skills/expertise/{domain-name}/references
 
 # Write SKILL.md
 # Write all reference files
 
 # Verify structure
-ls -R ~/.claude/skills/build/{domain-name}
+ls -R ~/.claude/skills/expertise/{domain-name}
 ```
 
 ## Step 10: Document in create-plans
@@ -416,7 +416,7 @@ Domain expertise skill is complete when:
 - [ ] Full lifecycle covered (not just getting started)
 - [ ] Platform-specific considerations included
 - [ ] SKILL.md explains it's a knowledge base for other skills
-- [ ] Located in ~/.claude/skills/build/{domain-name}/
+- [ ] Located in ~/.claude/skills/expertise/{domain-name}/
 - [ ] Referenced in create-plans domain inference table
 - [ ] Passes completeness test: "Could create-plans build a comprehensive roadmap with just this knowledge?"
 </success_criteria>

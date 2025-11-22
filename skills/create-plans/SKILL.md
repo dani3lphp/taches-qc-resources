@@ -107,13 +107,13 @@ If yes: `git init`
 </context_scan>
 
 <domain_expertise>
-**Domain expertise lives in `~/.claude/skills/build/`**
+**Domain expertise lives in `~/.claude/skills/expertise/`**
 
 Before creating roadmap or phase plans, determine if domain expertise should be loaded.
 
 <scan_domains>
 ```bash
-ls ~/.claude/skills/build/ 2>/dev/null
+ls ~/.claude/skills/expertise/ 2>/dev/null
 ```
 
 This reveals available domain expertise (e.g., macos-apps, iphone-apps, unity-games, next-js-apps).
@@ -126,15 +126,15 @@ If user's request contains domain keywords, INFER the domain:
 
 | Keywords | Domain Skill |
 |----------|--------------|
-| "macOS", "Mac app", "menu bar", "AppKit", "SwiftUI desktop" | build/macos-apps |
-| "iPhone", "iOS", "iPad", "mobile app", "SwiftUI mobile" | build/iphone-apps |
-| "Unity", "game", "C#", "3D game", "2D game" | build/unity-games |
-| "MIDI", "audio app", "music app", "DAW", "sequencer" | build/swift-midi-apps |
-| "Agent SDK", "Claude SDK", "agentic app" | build/with-agent-sdk |
+| "macOS", "Mac app", "menu bar", "AppKit", "SwiftUI desktop" | expertise/macos-apps |
+| "iPhone", "iOS", "iPad", "mobile app", "SwiftUI mobile" | expertise/iphone-apps |
+| "Unity", "game", "C#", "3D game", "2D game" | expertise/unity-games |
+| "MIDI", "audio app", "music app", "DAW", "sequencer" | expertise/swift-midi-apps |
+| "Agent SDK", "Claude SDK", "agentic app" | expertise/with-agent-sdk |
 
 If domain inferred, confirm:
 ```
-Detected: [domain] project → build/[skill-name]
+Detected: [domain] project → expertise/[skill-name]
 Load this expertise for planning? (Y / see other options / none)
 ```
 </inference_rules>
@@ -164,7 +164,7 @@ Select:
 When domain selected, READ all references from that skill:
 
 ```bash
-cat ~/.claude/skills/build/[domain]/references/*.md 2>/dev/null
+cat ~/.claude/skills/expertise/[domain]/references/*.md 2>/dev/null
 ```
 
 This loads domain patterns, conventions, commands into context BEFORE planning.

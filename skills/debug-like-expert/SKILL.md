@@ -25,26 +25,26 @@ find . -maxdepth 2 -type f 2>/dev/null | grep -E '\.(py|js|jsx|ts|tsx|rs|swift|c
 [ -f "go.mod" ] && echo "DETECTED: Go project"
 
 # Scan for available domain expertise
-echo "BUILD_SKILLS:"
-ls ~/.claude/skills/build/ 2>/dev/null | head -5
+echo "EXPERTISE_SKILLS:"
+ls ~/.claude/skills/expertise/ 2>/dev/null | head -5
 ```
 
 **Present findings before starting investigation.**
 </context_scan>
 
 <domain_expertise>
-**Domain-specific expertise lives in `~/.claude/skills/build/`**
+**Domain-specific expertise lives in `~/.claude/skills/expertise/`**
 
 Domain skills contain comprehensive knowledge including debugging, testing, performance, and common pitfalls. Before investigation, determine if domain expertise should be loaded.
 
 <scan_domains>
 ```bash
-ls ~/.claude/skills/build/ 2>/dev/null
+ls ~/.claude/skills/expertise/ 2>/dev/null
 ```
 
 This reveals available domain expertise (e.g., macos-apps, iphone-apps, python-games, unity-games).
 
-**If no build skills found:** Proceed without domain expertise (graceful degradation). The skill works fine with general debugging methodology.
+**If no expertise skills found:** Proceed without domain expertise (graceful degradation). The skill works fine with general debugging methodology.
 </scan_domains>
 
 <inference_rules>
@@ -52,18 +52,18 @@ If user's description or codebase contains domain keywords, INFER the domain:
 
 | Keywords/Files | Domain Skill |
 |----------------|--------------|
-| "Python", "game", "pygame", ".py" + game loop | build/python-games |
-| "React", "Next.js", ".jsx/.tsx" | build/nextjs-ecommerce |
-| "Rust", "cargo", ".rs" files | build/rust-systems |
-| "Swift", "macOS", ".swift" + AppKit/SwiftUI | build/macos-apps |
-| "iOS", "iPhone", ".swift" + UIKit | build/iphone-apps |
-| "Unity", ".cs" + Unity imports | build/unity-games |
-| "SuperCollider", ".sc", ".scd" | build/supercollider |
-| "Agent SDK", "claude-agent" | build/with-agent-sdk |
+| "Python", "game", "pygame", ".py" + game loop | expertise/python-games |
+| "React", "Next.js", ".jsx/.tsx" | expertise/nextjs-ecommerce |
+| "Rust", "cargo", ".rs" files | expertise/rust-systems |
+| "Swift", "macOS", ".swift" + AppKit/SwiftUI | expertise/macos-apps |
+| "iOS", "iPhone", ".swift" + UIKit | expertise/iphone-apps |
+| "Unity", ".cs" + Unity imports | expertise/unity-games |
+| "SuperCollider", ".sc", ".scd" | expertise/supercollider |
+| "Agent SDK", "claude-agent" | expertise/with-agent-sdk |
 
 If domain inferred, confirm:
 ```
-Detected: [domain] issue → build/[skill-name]
+Detected: [domain] issue → expertise/[skill-name]
 Load this debugging expertise? (Y / see other options / none)
 ```
 </inference_rules>
@@ -92,7 +92,7 @@ Select:
 When domain selected, READ all references from that skill:
 
 ```bash
-cat ~/.claude/skills/build/[domain]/references/*.md 2>/dev/null
+cat ~/.claude/skills/expertise/[domain]/references/*.md 2>/dev/null
 ```
 
 This loads comprehensive domain knowledge BEFORE investigation:
