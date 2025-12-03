@@ -1,0 +1,33 @@
+# Run Prompt Command Configuration
+
+# This file configures the /run-prompt command behavior
+
+[command]
+    name = "/run-prompt"
+    description = "Execute a saved prompt"
+    
+[arguments]
+    [arguments.prompt_path]
+        type = "string"
+        required = true
+        description = "Path to the prompt file to execute"
+        
+    [arguments.context]
+        type = "string"
+        required = false
+        description = "Additional context to provide to the prompt"
+
+[execution]
+    # Directory where prompts are located
+    prompts_directory = "./prompts"
+    
+    # Default context to use if none provided
+    default_context = ""
+    
+    # Whether to validate prompt structure before execution
+    validate = true
+    
+    # Validation rules
+    [execution.validation]
+        required_sections = ["Instructions"]
+        required_format = "markdown"

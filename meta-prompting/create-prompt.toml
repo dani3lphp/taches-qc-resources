@@ -1,0 +1,36 @@
+# Create Prompt Command Configuration
+
+# This file configures the /create-prompt command behavior
+
+[command]
+    name = "/create-prompt"
+    description = "Create a new structured prompt"
+    
+[arguments]
+    [arguments.title]
+        type = "string"
+        required = true
+        description = "Title for the new prompt"
+        
+    [arguments.description]
+        type = "string"
+        required = false
+        description = "Description of the prompt's purpose"
+        
+    [arguments.context]
+        type = "string"
+        required = false
+        description = "Additional context to include in the prompt"
+
+[execution]
+    # Template for new prompts
+    template = """# {title}\n\n{description}\n\n## Context\n\n{context}\n\n## Instructions\n\n1. [Step 1]\n2. [Step 2]\n3. [Step 3]\n\n## Output Format\n\n[Specify expected output format]\n"""
+    
+    # Directory where prompts are saved
+    output_directory = "./prompts"
+    
+    # File extension for prompt files
+    file_extension = ".md"
+    
+    # Whether to overwrite existing files
+    overwrite = false

@@ -1,0 +1,32 @@
+# Check Todos Command Configuration
+
+# This file configures the /check-todos command behavior
+
+[command]
+    name = "/check-todos"
+    description = "View the current todo list"
+    
+[arguments]
+    [arguments.filter]
+        type = "string"
+        required = false
+        description = "Filter todos by tag or priority"
+        
+    [arguments.completed]
+        type = "bool"
+        required = false
+        description = "Whether to show completed tasks"
+        default = false
+
+[execution]
+    # File to read todos from
+    todos_file = "./todos.md"
+    
+    # Whether to show completed tasks
+    show_completed = false
+    
+    # Format for displaying todos
+    display_format = "- [ ] {task} #priority:{priority} {tags}"
+    
+    # Sorting order
+    sort_by = "priority"

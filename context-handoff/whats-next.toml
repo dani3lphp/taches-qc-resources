@@ -1,0 +1,21 @@
+# Context Handoff Configuration
+
+# This file configures the /whats-next command behavior
+
+# Title for the handoff document
+handoff_title = "What's Next"
+
+# Sections to include in the handoff document
+sections = [
+    "Current Status",
+    "Next Steps",
+    "Important Notes",
+    "Resources",
+    "Blockers"
+]
+
+# Default template for handoff documents
+[template]
+    filename = "whats-next.md"
+    directory = "."
+    overwrite = false

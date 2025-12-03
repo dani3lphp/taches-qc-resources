@@ -1,0 +1,34 @@
+# Add to Todos Command Configuration
+
+# This file configures the /add-to-todos command behavior
+
+[command]
+    name = "/add-to-todos"
+    description = "Add a task to the todo list"
+    
+[arguments]
+    [arguments.task]
+        type = "string"
+        required = true
+        description = "Description of the task to add"
+        
+    [arguments.priority]
+        type = "string"
+        required = false
+        description = "Priority level (low, medium, high)"
+        default = "medium"
+        
+    [arguments.tags]
+        type = "string"
+        required = false
+        description = "Comma-separated tags for the task"
+
+[execution]
+    # File to store todos
+    todos_file = "./todos.md"
+    
+    # Format for new todo entries
+    entry_format = "- [ ] {task} #priority:{priority} {tags}"
+    
+    # Whether to append to existing todos or overwrite
+    append = true
