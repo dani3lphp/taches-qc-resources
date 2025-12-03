@@ -1,10 +1,8 @@
-# Meta-Prompting
+# Meta-Prompting Commands
 
-This module provides tools for creating and executing structured prompts in Claude Code.
+This directory contains commands for creating and running structured prompts.
 
-## Features
+## Commands
 
-- `/create-prompt` command to generate new prompts
-- `/run-prompt` command to execute saved prompts
-- Template system for consistent prompt structure
-- Integration with Claude Code for enhanced workflows
+- `/create-prompt` - Create new prompts with structured workflows
+- `/run-prompt` - Execute saved prompt files

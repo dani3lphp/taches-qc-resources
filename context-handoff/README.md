@@ -1,9 +1,7 @@
-# Context Handoff
+# Context Handoff Commands
 
-This module provides tools for creating structured handoff documents to continue work in a fresh context.
+This directory contains commands for continuing work in fresh contexts.
 
-## Features
+## Commands
 
-- `/whats-next` command to create handoff documents
-- Template system for consistent handoff documentation
-- Integration with Claude Code for seamless context switching
+- `/whats-next` - Create handoff documents for continuing work

@@ -1,10 +1,8 @@
-# Todo Management
+# Todo Management Commands
 
-This module provides tools for managing tasks and todos within Claude Code.
+This directory contains commands for capturing and managing tasks.
 
-## Features
+## Commands
 
-- `/add-to-todos` command to add tasks
-- `/check-todos` command to view current todos
-- Persistent storage for task management
-- Integration with Claude Code for seamless task tracking
+- `/add-to-todos` - Capture tasks with full context
+- `/check-todos` - Resume work on captured tasks
